@@ -1,0 +1,26 @@
+# Internal planning / spec documents — do not publish to GitHub
+project_files/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Node / Next.js (also covered by app/.gitignore)
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+next-env.d.ts
+
+# Local env files
+.env
+.env.local
+.env.*.local
+
+# Vercel
+.vercel

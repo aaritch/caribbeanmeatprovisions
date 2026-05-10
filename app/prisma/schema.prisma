@@ -1,0 +1,70 @@
+// Prisma schema. Models per spec §6.2.
+// NOTE: scaffold-only. Add datasource block + provider when DB is provisioned.
+// Set provider = "postgresql" and url = env("POSTGRES_PRISMA_URL").
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("POSTGRES_PRISMA_URL")
+  directUrl = env("POSTGRES_URL_NON_POOLING")
+}
+
+model QuoteRequest {
+  id                String    @id @default(cuid())
+  companyName       String
+  companyType       String
+  contactName       String
+  jobTitle          String?
+  email             String
+  phone             String
+  country           String
+  destinationPort   String
+  productSlugs      String[]
+  otherProductsText String?
+  estimatedVolume   String?
+  requiredByDate    DateTime?
+  urgency           String
+  halalRequired     Boolean   @default(false)
+  additionalNotes   String?
+  marketingConsent  Boolean   @default(false)
+  status            String    @default("new")
+  internalNotes     String?
+  submittedFromIp   String?
+  userAgent         String?
+  createdAt         DateTime  @default(now())
+  updatedAt         DateTime  @updatedAt
+
+  @@index([createdAt(sort: Desc)])
+  @@index([status])
+  @@index([email])
+}
+
+model ContactMessage {
+  id              String   @id @default(cuid())
+  name            String
+  email           String
+  subject         String
+  message         String
+  status          String   @default("new")
+  submittedFromIp String?
+  userAgent       String?
+  createdAt       DateTime @default(now())
+
+  @@index([createdAt(sort: Desc)])
+  @@index([status])
+}
+
+model NewsletterSubscription {
+  id                 String    @id @default(cuid())
+  email              String    @unique
+  confirmedAt        DateTime?
+  confirmationToken  String?
+  unsubscribedAt     DateTime?
+  submittedFromIp    String?
+  createdAt          DateTime  @default(now())
+
+  @@index([confirmedAt])
+}

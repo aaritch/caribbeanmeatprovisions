@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e3b53"/>
+      <stop offset="100%" stop-color="#0b2c3e"/>
+    </linearGradient>
+    <pattern id="grain" width="3" height="3" patternUnits="userSpaceOnUse">
+      <rect width="3" height="3" fill="#0d384f" fill-opacity="0.35"/>
+      <circle cx="1" cy="1" r="0.5" fill="#0c3247" fill-opacity="0.4"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#g)"/>
+  <rect width="1600" height="900" fill="url(#grain)" opacity="0.18"/>
+  <g font-family="Georgia, serif" fill="#F5F1E8" text-anchor="middle">
+    <text x="800" y="450" font-size="75" font-weight="700">Caribbean Service Area</text>
+    <text x="800" y="525" font-size="38" font-weight="400" opacity="0.85">Ports across 20+ countries</text>
+  </g>
+</svg>

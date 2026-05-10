@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1200" width="2400" height="1200" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5a3a2f"/>
+      <stop offset="100%" stop-color="#442c23"/>
+    </linearGradient>
+    <pattern id="grain" width="3" height="3" patternUnits="userSpaceOnUse">
+      <rect width="3" height="3" fill="#56372d" fill-opacity="0.35"/>
+      <circle cx="1" cy="1" r="0.5" fill="#4d3128" fill-opacity="0.4"/>
+    </pattern>
+  </defs>
+  <rect width="2400" height="1200" fill="url(#g)"/>
+  <rect width="2400" height="1200" fill="url(#grain)" opacity="0.18"/>
+  <g font-family="Georgia, serif" fill="#fff" text-anchor="middle">
+    <text x="1200" y="600" font-size="100" font-weight="700">LAMB</text>
+    <text x="1200" y="700" font-size="50" font-weight="400" opacity="0.85">Caribbean Meat Provisions</text>
+  </g>
+</svg>
