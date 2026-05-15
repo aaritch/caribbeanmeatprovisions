@@ -39,7 +39,7 @@ export const SITE = {
   name: 'Caribbean Meat Provisions',
   shortName: 'CMP',
   tagline: 'Importers & Distributors of Fine Beef, Pork, Poultry, Lamb & Mutton',
-  phone: '+1 (305) 555-0140',
+  phone: '+1 (305) 791-0949',
   email: 'sales@caribbeanmeatprovisions.com',
   address: '2400 NW 17th Ave, Miami, FL 33142, USA',
 };
